@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { akitaDevtools } from '@datorama/akita';
+
+if (process.env.NODE_ENV !== 'production') {
+  akitaDevtools();
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
